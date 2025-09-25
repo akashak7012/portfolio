@@ -71,15 +71,15 @@ function App() {
 
       {/* Navbar stays at top */}
   <nav className="navbar">
-    <h2>React Bits</h2>
+    <h2>DEV X DESIGN</h2>
     <div className="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Docs</a>
+      <a href="#2">Contact</a>
+      <a href="#1">About Me</a>
     </div>
   </nav>
 
   {/* Hero content stays in center */}
-  <main className="hero">
+  <main className="hero" >
     <h1>
      Making websites cooler than my internet speed.
     </h1>
@@ -101,7 +101,7 @@ function App() {
   </main>
 
   {/* About section */}
-  <section className='about-class' >
+  <section className='about-class' id='1'>
         <div className='about-class-container'>
           <div className="about">
             <div className='about-title'><h2>Who’s this guy?</h2></div>
@@ -134,14 +134,20 @@ function App() {
       </section>
   
   <TextRevealDemo/>
-  <ProjectsSection />
+  <div id='3'>
+<ProjectsSection />
+  </div>
+  
   <div >
     <MovingIcons title="Design" logos={designLogos} />
       <MovingIcons title="Frontend" logos={frontendLogos} />
       <MovingIcons title="Backend" logos={backendLogos} />
       
   </div>
-  <Footer/>
+  <div id='2'>
+    <Footer/>
+  </div>
+  
   
  
 
