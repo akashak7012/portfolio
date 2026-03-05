@@ -1,0 +1,25 @@
+.svg-demo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.svg-reveal-text {
+  margin: 0 auto;
+ 
+  text-align: center;
+  font-size: 1.5rem; /* ~36px */
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .svg-reveal-text { color: white; }
+  .svg-mask-box { color: black; background: white; }
+}
+
+.highlight { color: #3b82f6; } /* blue-500 */
+
+

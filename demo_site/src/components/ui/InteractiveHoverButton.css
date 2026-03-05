@@ -1,0 +1,61 @@
+.interactive-hover-button {
+  position: relative;
+  width: auto;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 9999px; /* This is the CSS equivalent of rounded-full */
+  border: 1px solid #e5e7eb; /* Example border color */
+  background-color: #f9fafb; /* Example background color */
+  padding: 0.5rem 1.5rem; /* Example padding */
+  text-align: center;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interactive-hover-button:hover .dot {
+  transform: scale(100.8);
+}
+
+.interactive-hover-button:hover .initial-content .text {
+  transform: translateX(3rem);
+  opacity: 0;
+}
+
+.interactive-hover-button:hover .hover-content {
+  transform: translateX(-0.5rem);
+  opacity: 1;
+}
+
+.initial-content,
+.hover-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.initial-content {
+  color: #000000; /* Example text color */
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: #000000; /* Example dot color */
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color: #ffffff; /* Example hover text color */
+  transform: translateX(3rem);
+  opacity: 0;
+}
