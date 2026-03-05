@@ -1,0 +1,56 @@
+.mask-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  
+}
+
+.mask-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: center; /* justify-center */
+  
+  width: 100%;
+  background: black; /* bg-black */
+  font-size: 1rem; /* text-6xl */
+  -webkit-mask-image: url("/mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 40px;
+  mask-image: url("/mask.svg");
+  mask-repeat: no-repeat;
+  mask-size: 40px;
+  color: white; /* text-white / dark:text-black handled via theme */
+  transition: all 0.3s ease;
+}
+
+.mask-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  
+  width: 100%;
+  background: black;
+  opacity: 0.5;
+}
+
+.mask-content {
+  position: relative;
+  z-index: 20;
+  max-width: 56rem; /* max-w-4xl */
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem; /* text-4xl */
+  font-weight: bold;
+  color: white;
+}
+
+.mask-reveal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}

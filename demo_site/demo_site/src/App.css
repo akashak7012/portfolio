@@ -1,0 +1,229 @@
+/* =================================
+   Base & Desktop Layout
+   ================================= */
+.App {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  background: transparent;
+}
+
+/* Navbar fixed at top */
+.navbar {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 100px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: absolute; /* stays at top */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.navbar h2 {
+  font-weight: 700;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
+  margin: 0;
+  padding: 5px 0px;
+}
+
+/* Navbar links */
+.navbar a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero content centered */
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  z-index: 5;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.8rem; /* Reduced from 3rem */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 0.9rem; /* Reduced from 1rem */
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 26px; /* Adjusted padding */
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn.primary {
+  background: #fff;
+  color: #000;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.secondary:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+/* About Section */
+.about-class {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-class-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-title {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin: 10px 10%;
+  padding: 10px 20px;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
+  color: #ffffff;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.1rem; /* Reduced from 1.2rem */
+  line-height: 1.5;
+  text-align: center;
+  border-radius: 12px;
+  margin: 10px 10%;
+  padding: 20px;
+  color: #ccc;
+}
+
+/* This class seems mobile-specific, so it's best placed in the media query */
+.mobile-about-text {
+  display: none; /* Hide on desktop by default */
+}
+
+
+/* =================================
+   Mobile Layout (screens < 768px)
+   ================================= */
+@media (max-width: 768px) {
+
+  /* --- Navbar Adjustments --- */
+  .navbar {
+    width: 90%;
+    padding: 15px 25px; /* Unified padding */
+  }
+
+  .navbar h2 {
+    font-size: 1.1rem; /* Reduced from 1.2rem */
+  }
+
+  .navbar a {
+    margin-left: 15px;
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+  }
+
+  /* --- Hero Section Content --- */
+  .hero {
+    padding: 0 20px; /* Prevent text from touching screen edges */
+  }
+  
+  .hero h1 {
+    font-size: 2rem; /* Reduced from 2.2rem */
+  }
+
+  .hero p {
+    font-size: 0.85rem; /* Reduced from 0.95rem */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+    padding: 8px 20px; /* Adjusted padding */
+  }
+
+  /* --- About Section Stacking --- */
+  .about-class {
+    height: auto; /* Allow the section to grow with content */
+    padding: 60px 20px;
+  }
+
+  .about-class-container {
+    flex-direction: column; /* Stack content vertically */
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-title,
+  .about-description {
+    margin: 0; /* Remove horizontal margins for full width */
+  }
+  
+  .about-title {
+    font-size: 1.2rem; /* Reduced from 1.3rem */
+  }
+
+  .about-description {
+    font-size: 0.9rem; /* Reduced from 1rem */
+  }
+  
+  /* --- Mobile-Specific Text Styling --- */
+  .mobile-about-text {
+    display: block; /* Show this text only on mobile */
+    font-size: 1.2rem; /* Reduced from 1.3rem */
+    font-weight: 700;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .mobile-about-text .highlight {
+    color: #3b82f6; /* A highlight color */
+  }
+}
+
